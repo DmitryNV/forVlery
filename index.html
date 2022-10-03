@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing</title>
+    <link rel="stylesheet" href="pets.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <style>
+        :root {
+            --green: #4B9200;
+            --orang: #F9804B;
+            --orang_hover: #E47209;
+            --yellow: #FFEE2E;
+            --orange_grad: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+            --pink_grad: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+            --rad: #D31414;
+            --black_blue: #333B41;
+            --gray: #767474;
+            --gray_smokey: #ABABAB;
+            --light_gray: #F1F3F2;
+            --frosted_glass_white: rgba(253, 253, 255, 0.52);
+            --white: #FFFFFF;
+            --animal-online-height: 780px;
+        }
+
+        @font-face {
+            font-family: "Roboto";
+            src: url(/assets/fonts/Roboto-Regular.ttf);
+        }
+
+        body {
+            margin: 0 auto;
+            width: 1600px;
+            position: relative;
+        }
+
+        input {
+            border: 0;
+        }
+
+        button {
+            border: 0;
+            color: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        h1 {
+            font-family: "Roboto", serif;
+            font-style: normal;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0;
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 120%;
+        }
+
+        .header {
+            background-color: black;
+            height: 80px;
+            color: #FFFFFF;
+        }
+
+        .outer-container {
+            width: 1600px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            position: relative;
+            margin-right: 63px;
+            color: white;
+            /*background-color: black;*/
+            width: min-content;
+        }
+
+        .logo-text {
+            font-size: 19.0145px;
+            line-height: 120%;
+            text-align: center;
+            font-style: normal;
+            font-weight: normal;
+            vertical-align: center;
+        }
+
+        .container {
+            width: 1160px;
+        }
+
+        .nav {
+            font-family: "Roboto", serif;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .nav a {
+            transition: ease 0.3s;
+        }
+
+        .nav a:hover {
+            color: #F9804B;
+            transition: ease 0.3s;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .align-end {
+            align-items: end;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .gap-58px {
+            gap: 58px;
+        }
+
+        .ellipse-6 {
+            width: 465px;
+            height: 465px;
+            left: calc(50% - 465px / 2 + 239.5px);
+            top: 92px;
+        }
+
+        .animal-online-height {
+            height: var(--animal-online-height);
+        }
+
+        .panda-text {
+            width: 500.31px;
+            height: 400px;
+            left: calc(50% - 500.31px / 2 + 330.15px);
+            top: 166px;
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 106.496px;
+            line-height: 75%;
+            /* or 80px */
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .text-white {
+            color: var(--white)
+        }
+
+        .text-black-blue {
+            color: var(--black_blue);
+        }
+
+        .text-yellow {
+            color: var(--yellow);
+        }
+
+        .roboto-normal {
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .btn {
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            /* or 22px */
+            text-transform: uppercase;
+        }
+
+        .btn_1 {
+            width: 298px;
+            height: 54px;
+            background: var(--orang);
+            border-radius: 25px;
+            color: var(--white);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn_1:hover {
+            background: var(--orang_hover);
+        }
+
+        .btn_1:active {
+            background: var(--green);
+        }
+
+        .btn_1:disabled {
+            background: var(--gray);
+        }
+
+        .rectangle-8 {
+            border-radius: 5px;
+        }
+
+        .full {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        .flex-half {
+            width: 50%;
+        }
+
+        .bamboo-cap {
+            width: 609px;
+            height: 403px;
+            background: url("/assets/img/bamboo-cap.png");
+            backdrop-filter: blur(2px);
+        }
+
+        .subtitle {
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        .flower-photo {
+            position: absolute;
+            width: 200px;
+            height: 605px;
+            right: 0;
+            top: 792px;
+            background: url(/assets/img/flower_foto1.png);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .foto-card {
+            box-sizing: border-box;
+            border: 1px solid var(--orang);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: ease 0.3s;
+        }
+
+        .rectangle {
+            position: relative;
+            width: 365px;
+            height: 366px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+
+        .rectangle:hover > .foto-card > .card-image {
+            height: calc(366px + 20px);
+            width: calc(365px + 20px);
+            transition: ease 0.3s;
+        }
+
+        .rectangle:hover > .foto-card {
+            width: calc(367px + 20px);
+            height: calc(366px + 87px);
+            transition: ease 0.3s;
+            z-index: 1000;
+            background: white;
+        }
+
+        .foto-card-text-holder {
+            position: absolute;
+            bottom: 0;
+            margin-left: 16px;
+            padding-bottom: 10px;
+            z-index: -15;
+
+        }
+
+        .small-paragraph {
+            font-family: 'Roboto', serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 120%;
+        }
+
+        .card-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 16px;
+            z-index: -30;
+        }
+
+        .ellipse-1 {
+            border-radius: 9999px;
+            width: 62px;
+            height: 62px;
+            background: var(--orang);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .ellipse-1:active {
+            background: var(--green);
+        }
+
+        .palm-photo {
+            position: absolute;
+            width: 292px;
+            height: 460px;
+            left: 0;
+            bottom: -100px;
+            background: url(/assets/img/palm_foto.png);
+        }
+
+        .strelitza_1 {
+            position: absolute;
+            width: 368px;
+            height: 275px;
+            right: 0;
+            bottom: -100px;
+            background: url(/assets/img/strelitzia_1.png);
+        }
+
+        .email-button {
+            box-sizing: border-box;
+            /* gray_light */
+            background: #F1F3F2;
+            /* black_blue */
+            border: 1px solid #333B41;
+            border-radius: 5px;
+            width: 129px;
+            height: 42px;
+        }
+
+        .footer {
+            background-color: #111115;
+        }
+
+        .input {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #333B41;
+            height: 42px;
+            border-radius: 2px;
+            background-color: transparent;
+        }
+
+        .input:focus {
+            border-color: green;
+        }
+
+        .input:invalid {
+            border-color: var(--rad);
+        }
+
+        .email-input {
+            box-sizing: border-box;
+
+            border-color: var(--orang);
+            color: white;
+        }
+
+        .social-ellipse {
+            border-radius: 9999px;
+            width: 26px;
+            height: 26px;
+            background: rgba(196, 196, 196, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mr-12px {
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="flower-photo"></div>
+<header class="header flex align-center absolute outer-container" style="z-index: 20">
+    <div class="container flex">
+        <div class="logo flex align-center">
+            <a class="relative" style="display: block; height: 52px; width: 82px" href="/">
+                <object class="absolute" style="top: 0; left: 0" data="/assets/svg/logo/old/Rectangle%204.svg"></object>
+                <object class="absolute" style="top: 23.64px; left: 9px; z-index: 200"
+                        data="/assets/svg/logo/old/bamboo.svg"></object>
+                <h1 class="absolute logo-text" style="top: 5px; left: 0;">PetStory Online</h1>
+
+                <!--                    <img height="52" width="82" src="/assets/svg/logo/logo_footer.svg" alt="no image">-->
+            </a>
+        </div>
+        <nav class="nav flex align-center gap-58px">
+            <div>
+                <a href="/">
+                    About
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    Map
+                </a>
+
+            </div>
+            <div>
+                <a href="#">
+                    Zoos
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    Contact us
+                </a>
+            </div>
+            <div>
+                <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+                    Designed by &copy
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+<main class="outer-container">
+    <section id="watch-your-favourite-animal-online" class="relative animal-online-height">
+        <img src="/assets/img/giant_panda.png" class="absolute animal-online-height" alt="">
+        <object data="/assets/svg/ellipse_6.svg" class="absolute ellipse-6"></object>
+        <h1 class="panda-text absolute text-white">
+            watch your <span class="text-yellow">favourite</span> animal online
+        </h1>
+        <button
+                class="absolute btn btn_1"
+                style="left: calc(50% - 298px/2 + 332px); top: 626px;"
+        >
+            WATCH ONLINE
+        </button>
+    </section>
+    <section id="the-backstage" class="text-black-blue roboto-normal flex justify-center" style="margin-top: 140px;">
+        <div class="container flex">
+            <div class="flex-half bamboo-cap"></div>
+            <div class="flex-half">
+                <div style="margin-left: 87px">
+                    <h2>The Backstage of the Wilderness World.</h2>
+                    <article style="margin-top: 20px; line-height: 130%">
+                        The site was founded on the basis of a volunteer movement to protect and care for animals.
+                    </article>
+                    <div style="margin-top: 54px;" class="subtitle">How it works</div>
+                    <article style="margin-top: 34px; line-height: 140%">
+                        The main goal is to help the animals, as well as the nature reserves and zoos where they are
+                        kept. We are currently working on video projects targeting pandas in China, eagles on an island
+                        near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more
+                        than 1,500 mammals and reptiles.
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pets" class="relative">
+        <div>
+            <div class="flex align-center justify-center" style="margin-top: 180px; gap: 20px">
+                <div class="ellipse-1">
+                    <object data="/assets/svg/arrows/arrow-left.svg"></object>
+                </div>
+                <div class="container flex wrap" style="gap: 20px 30px">
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/pandas.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">giant pandas</div>
+                                <article class="small-paragraph">
+                                    Native to Southwest China
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/banana-bamboo_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/eagle.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">eagle</div>
+                                <article class="small-paragraph">
+                                    Native to South America
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/meet-fish_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/gorillaz.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">Gorillas</div>
+                                <article class="small-paragraph">
+                                    Native to Congo
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/banana-bamboo_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/sloth.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">Two-toed Sloth</div>
+                                <article class="small-paragraph">
+                                    Mesoamerica, South America
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/banana-bamboo_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/cheetas.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">cheetas</div>
+                                <article class="small-paragraph">
+                                    Native to Africa
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/meet-fish_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                    <div class="rectangle">
+                        <div class="foto-card">
+                            <img src="/assets/img/pets-block/penguins.png" class="card-image" alt="">
+                            <div class="foto-card-text-holder">
+                                <div class="btn" style="margin-top: 8px;">Penguins</div>
+                                <article class="small-paragraph">
+                                    Native to Antarctica
+                                </article>
+                            </div>
+                            <object
+                                    class="card-icon"
+                                    data="/assets/svg/icons/banana-bamboo_icon.svg"
+                            ></object>
+                        </div>
+                    </div>
+                </div>
+                <div class="ellipse-1">
+                    <object data="/assets/svg/arrows/arrow-right.svg"></object>
+                </div>
+
+
+            </div>
+            <div class="palm-photo"></div>
+            <div class="strelitza_1"></div>
+            <div class="flex justify-center" style="margin-top: 80px; margin-bottom: 100px">
+                <button class="btn btn_1">CHOOSE YOUR FAVOURITE</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="d-footer d-position_relative" style="width: 1600px; height: 1004px">
+        <div class="d-inner_footer d-position_absolute">
+            <div class="d-pick_and_feed">
+                Pick and feed a friend
+            </div>
+            <div class="d-we_know_the_animal">
+                We know the animals bring you joy, and in these extraordinary times, we’re glad.
+            </div>
+            <div class="d-during_a_time">
+                During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people
+                around the world find joy in PatStory.
+            </div>
+            <div class="d-even_though">
+                Even though the zoo has reopened, we need you now more than ever to help us deal with these problems.
+                Please consider a gift to our <a href="" style="text-decoration: underline #FE9013"> Emergency Support
+                Fund</a>.
+            </div>
+            <h3 class="d-how_it_works">
+                How it works
+            </h3>
+            <div class="d-footer_images d-flex d-align-items">
+                <div>
+                    <img src="assets/images/widjet1.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/Vector%20(1).png" alt="" style="margin-left:31px; margin-right:30px">
+                </div>
+                <div>
+                    <img src="assets/images/widjet3%20(1).png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/Vector.png" alt="" style="margin-left:31px; margin-right:32px">
+                </div>
+                <div>
+                    <img src="assets/images/widjet3%20(2).png" alt="">
+                </div>
+            </div>
+            <button class="btn btn_1" style="margin: 60px 431px 0 431px;">
+                Feed a friend now
+            </button>
+        </div>
+    </section>
+
+
+    <h3 class="d-testimonials">
+        Testimonials
+    </h3>
+    <section class="d-flex" style="justify-content: center">
+        <div>
+            <img src="assets/images/testimonials.png" alt="" style="margin-right: 30px">
+        </div>
+        <div>
+            <img src="assets/images/testimonials%20(1).png" alt="" style="margin-right: 30px">
+        </div>
+        <div>
+            <img src="assets/images/testimonials%20(2).png" alt="" style="margin-right: 30px">
+        </div>
+        <div>
+            <img src="assets/images/testimonials%20(3).png" alt="">
+        </div>
+    </section>
+    <div class="d-line"></div>
+    <button class="btn btn_1 rectangle-8" style="margin-left: 220px;">
+        leave feedback
+    </button>
+</main>
+<footer class="outer-container footer flex justify-center" style="margin-top: 180px;">
+    <div class="container" style="padding-top: 41px;">
+        <div class="flex justify-between">
+            <div class="logo flex align-center">
+                <a class="relative" style="display: block; height: 52px; width: 82px" href="/">
+                    <object class="absolute" style="top: 0; left: 0"
+                            data="/assets/svg/logo/old/Rectangle%204.svg"></object>
+                    <object class="absolute" style="top: 23.64px; left: 9px; z-index: 200"
+                            data="/assets/svg/logo/old/bamboo.svg"></object>
+                    <h1 class="absolute logo-text" style="top: 5px; left: 0;">PetStory Online</h1>
+
+                    <!--                    <img height="52" width="82" src="/assets/svg/logo/logo_footer.svg" alt="no image">-->
+                </a>
+            </div>
+            <div>
+                <div class="subtitle text-white" style="margin-bottom: 14px;">Subscribe to our news</div>
+                <label>
+                    <input class="input email-input" style="width: 228px" type="email">
+                </label>
+                <button style="margin-left: 10px" class="email-button">Submit</button>
+
+            </div>
+        </div>
+        <div style="margin-top: 36px">
+            <button class="btn btn_1 rectangle-8">DONATE FOR VOLUNTEERS</button>
+        </div>
+        <div class="flex justify-between align-end text-white" style="margin-top: 44px;">
+            <div class="flex flex-column" style="gap: 10px">
+                <div class="flex align-center">
+                    <div class="social-ellipse mr-12px"></div>
+                    Facebook
+                </div>
+                <div class="flex align-center">
+                    <div class="social-ellipse mr-12px"></div>
+                    Twitter
+                </div>
+                <div class="flex align-center">
+                    <div class="social-ellipse mr-12px"></div>
+                    Instagram
+                </div>
+                <div class="flex align-center">
+                    <div class="social-ellipse mr-12px"></div>
+                    YouTube
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>
