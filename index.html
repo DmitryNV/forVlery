@@ -8,52 +8,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<div class="flower-photo"></div>
-<header class="header flex align-center absolute outer-container flex justify-center" style="z-index: 20">
-    <div class="container flex">
-        <div class="logo flex align-center">
-            <a class="relative" style="display: block; height: 52px; width: 82px" href="/">
-                <object class="absolute" style="top: 0; left: 0" data="/assets/svg/logo/old/Rectangle%204.svg"></object>
-                <object class="absolute" style="top: 23.64px; left: 9px; z-index: 200"
-                        data="/assets/svg/logo/old/bamboo.svg"></object>
-                <h1 class="absolute logo-text" style="top: 5px; left: 0;">PetStory Online</h1>
 
-                <!--                    <img height="52" width="82" src="/assets/svg/logo/logo_footer.svg" alt="no image">-->
-            </a>
+<div class="flex justify-center">
+    <header class="header flex align-center absolute outer-container flex justify-center" style="z-index: 20;">
+        <div class="container flex">
+            <div class="logo flex align-center">
+                <a class="relative" style="display: block; height: 52px; width: 82px" href="/">
+                    <object class="absolute" style="top: 0; left: 0" data="/assets/svg/logo/old/Rectangle%204.svg"></object>
+                    <object class="absolute" style="top: 23.64px; left: 9px; z-index: 200"
+                            data="/assets/svg/logo/old/bamboo.svg"></object>
+                    <h1 class="absolute logo-text" style="top: 5px; left: 0;">PetStory Online</h1>
+                    <img height="52" width="82" src="/assets/svg/logo/logo_footer.svg" alt="no image">
+                </a>
+            </div>
+            <nav class="nav flex align-center gap-58px">
+                <div>
+                    <a href="/">
+                        About
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        Map
+                    </a>
+
+                </div>
+                <div>
+                    <a href="#">
+                        Zoos
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        Contact us
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+                        Designed by &copy
+                    </a>
+                </div>
+            </nav>
         </div>
-        <nav class="nav flex align-center gap-58px">
-            <div>
-                <a href="/">
-                    About
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    Map
-                </a>
+    </header>
+</div>
 
-            </div>
-            <div>
-                <a href="#">
-                    Zoos
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    Contact us
-                </a>
-            </div>
-            <div>
-                <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
-                    Designed by &copy
-                </a>
-            </div>
-        </nav>
-    </div>
-</header>
 <main class="outer-container">
-    <section id="watch-your-favourite-animal-online" class="relative animal-online-height">
-        <img src="/assets/img/giant_panda.png" class="absolute animal-online-height" alt="">
+    <section id="watch-your-favourite-animal-online" class="relative animal-online-height" style="object-fit: contain">
+        <img src="/assets/img/giant_panda.png" class="absolute animal-online-height">
         <object data="/assets/svg/ellipse_6.svg" class="absolute ellipse-6"></object>
         <h1 class="panda-text absolute text-white">
             watch your <span class="text-yellow">favourite</span> animal online
@@ -65,7 +67,8 @@
             WATCH ONLINE
         </button>
     </section>
-    <section id="the-backstage" class="text-black-blue roboto-normal flex justify-center" style="margin-top: 140px;">
+    <section id="the-backstage" class="text-black-blue roboto-normal outer-container flex justify-center relative" style="margin-top: 140px;">
+        <div class="flower-photo"></div>
         <div class="container flex">
             <div class="flex-half bamboo-cap"></div>
             <div class="flex-half">
@@ -88,7 +91,7 @@
     <section id="pets" class="relative">
         <div>
             <div class="flex align-center justify-center" style="margin-top: 180px; gap: 20px">
-                <div class="ellipse-1">
+                <div class="ellipse-1 pc-only">
                     <object data="/assets/svg/arrows/arrow-left.svg"></object>
                 </div>
                 <div class="container flex wrap" style="gap: 20px 30px">
@@ -183,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ellipse-1">
+                <div class="ellipse-1 pc-only">
                     <object data="/assets/svg/arrows/arrow-right.svg"></object>
                 </div>
 
