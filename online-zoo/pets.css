@@ -17,11 +17,15 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url(/assets/fonts/Roboto-Regular.ttf);
+    src: url(/online-zoo/assets/fonts/Roboto-Regular.ttf);
 }
 @font-face {
     font-family: "Roboto Thin";
-    src: url(/assets/fonts/Roboto-Thin.ttf);
+    src: url(/online-zoo/assets/fonts/Roboto-Thin.ttf);
+}
+@query
+@media screen and (max-width: 400px), (resolution: ) {
+    
 }
 
 body {
@@ -247,7 +251,7 @@ h2 {
 .bamboo-cap {
     width: 609px;
     height: 403px;
-    background: url("/assets/img/bamboo-cap.png");
+    background: url("/online-zoo/assets/img/bamboo-cap.png");
     backdrop-filter: blur(2px);
 }
 
@@ -265,7 +269,7 @@ h2 {
     height: 605px;
     right: 0;
     top: -103px;
-    background: url(/assets/img/flower_foto1.png);
+    background: url(/online-zoo/assets/img/flower_foto1.png);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -353,7 +357,7 @@ h2 {
     height: 460px;
     left: 0;
     bottom: -100px;
-    background: url(/assets/img/palm_foto.png);
+    background: url(/online-zoo/assets/img/palm_foto.png);
 }
 
 .strelitza_1 {
@@ -362,7 +366,7 @@ h2 {
     height: 275px;
     right: 0;
     bottom: -100px;
-    background: url(/assets/img/strelitzia_1.png);
+    background: url(/online-zoo/assets/img/strelitzia_1.png);
 }
 
 .email-button {
