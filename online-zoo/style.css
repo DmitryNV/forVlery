@@ -1,11 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -23,16 +22,16 @@ li {
     margin: 0 auto;
 }
 
+.header {
+    display: flex;
+    min-height: 82px;
+    align-items: center;
+    background-color: #000000;
+}
+
 .container {
     max-width: 1160px;
     margin: 0 auto;
-}
-
-.header {
-    background-color: #000000;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
 }
 
 .logo {
@@ -44,7 +43,6 @@ li {
     box-sizing: border-box;
     border-radius: 2px;
     color: #fdfdff;
-    transition: all 0.3s;
 }
 
 .logo:hover {
@@ -55,7 +53,7 @@ li {
 .logo-image {
     font-size: 19px;
     font-weight: 300;
-    line-height: 120%;
+    line-height: 125%;
     text-align: center;
 }
 
